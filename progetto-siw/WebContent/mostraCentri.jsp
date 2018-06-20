@@ -16,7 +16,7 @@
 		<c:forEach var="centro" items="${centri}">
 			<li>
 				<div><a href="centro?idCentro=${centro.id}">${centro.nome}</a></div>
-				<div>Contatti : ${centro.numeroTelefono}</div>
+				<div>Contatto : ${centro.numeroTelefono}</div>
 			</li>
 		</c:forEach>
 	</ul>

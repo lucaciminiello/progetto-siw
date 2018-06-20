@@ -17,6 +17,8 @@
 			<li>
 				<div><a href="centro?idCentro=${centro.id}">${centro.nome}</a></div>
 				<div>Contatto : ${centro.numeroTelefono}</div>
+				<div>Email : ${centro.email}</div>
+				<div>Indirizzo : ${centro.indirizzo}</div>
 			</li>
 		</c:forEach>
 	</ul>

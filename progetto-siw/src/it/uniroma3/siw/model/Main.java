@@ -1,6 +1,6 @@
 package it.uniroma3.siw.model;
 
-import it.uniroma3.siw.service.Attivit‡Service;
+import it.uniroma3.siw.service.Attivit√†Service;
 import it.uniroma3.siw.service.AziendaService;
 import it.uniroma3.siw.service.CentroService;
 import it.uniroma3.siw.service.ResponsabileService;
@@ -23,19 +23,23 @@ public class Main {
 		Responsabile matteo = new Responsabile();
 		matteo.setNome("MATTEO");
 
-		Attivit‡ att1 = new Attivit‡("ASTRONOMIA", "MARTEDÏ", 10, 12);
-		Attivit‡ att2 = new Attivit‡("GEOLOGIA", "GIOVEDÏ", 13, 15);
+		Attivit√† att1 = new Attivit√†("ASTRONOMIA", "MARTED√¨", 10, 12);
+		Attivit√† att2 = new Attivit√†("GEOLOGIA", "GIOVED√¨", 13, 15);
 
 		Centro c1 = new Centro("SCR");
 		c1.setNumeroTelefono("065784330");
-		c1.getAttivit‡().add(att1);
+		c1.setEmail("scr@gmail.com");
+		c1.setIndirizzo("Via Dante Alighieri 12");
+		c1.getAttivit√†().add(att1);
 		c1.setResponsabile(marco);
 
 		att1.setCentro(c1);
 
 		Centro c2 = new Centro("SDR");
 		c2.setNumeroTelefono("023456789");
-		c2.getAttivit‡().add(att2);
+		c2.setEmail("sdr@gmail.com");
+		c2.setIndirizzo("Via dei Corazzieri 70");
+		c2.getAttivit√†().add(att2);
 		c2.setResponsabile(matteo);
 
 		att2.setCentro(c2);
@@ -46,7 +50,7 @@ public class Main {
 		AziendaService as = new AziendaService();
 		CentroService cs = new CentroService();
 		ResponsabileService rs = new ResponsabileService();
-		Attivit‡Service atts = new Attivit‡Service();
+		Attivit√†Service atts = new Attivit√†Service();
 
 		EntityTransaction tx = ServiziFactory.getIstanza().getEntityManager().getTransaction();
 
